@@ -32,7 +32,10 @@ export default function App() {
   return (
     <div>
       <Section title="Please leave feedback">
-        <FeedbackOptions options={{}} onLeaveFeedback={onLeaveFeedback} />
+        <FeedbackOptions
+          options={Object.keys(state)}
+          onLeaveFeedback={onLeaveFeedback}
+        />
       </Section>
       <Section title="Statistics">
         {noFeedback ? (
